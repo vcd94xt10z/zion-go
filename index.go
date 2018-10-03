@@ -9,7 +9,7 @@ func main() {
 	var b bytes.Buffer
 
 	b.WriteString("ab")
-	b.WriteString("abccc")
+	b.WriteString("addddd")
 	fmt.Println(b.String())
 
 	var nome string
