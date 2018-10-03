@@ -1,15 +1,18 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
-	"net/http"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello")
-}
+func main() {
+	var b bytes.Buffer
 
-func main(){
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080",nil)
+	b.WriteString("ab")
+	b.WriteString("abccc")
+	fmt.Println(b.String())
+
+	var nome string
+	nome = "Vinicius" + " " + "Dias"
+	fmt.Println(nome)
 }
